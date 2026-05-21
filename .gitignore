@@ -1,0 +1,5 @@
+env.txt
+credentials.json
+__pycache__/
+*.pyc
+upload_to_github.py
