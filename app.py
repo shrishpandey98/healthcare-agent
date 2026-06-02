@@ -121,6 +121,16 @@ def logout():
     flash("Signed out successfully.", "success")
     return redirect(url_for("login"))
 
+@app.route("/dev-login")
+def dev_login():
+    session["user"] = {
+        "email": "dev@medora.ai",
+        "name": "Developer User",
+        "picture": "",
+        "role": "hospital",
+    }
+    return redirect(url_for("dashboard"))
+
 def get_sheet():
     import gspread
     from google.oauth2.service_account import Credentials
