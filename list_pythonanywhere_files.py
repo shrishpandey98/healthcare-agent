@@ -19,6 +19,6 @@ def list_files(path=""):
         print(f"Error {response.status_code}: {response.text}")
         return None
 
-files = list_files()
+files = list_files("static")
 if files:
     print(json.dumps(files, indent=2))
